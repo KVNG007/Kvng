@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './App.scss';
+import './Styles/main.css'
+
+import Dropdown from "./Components/Dropdown"
+import Ham from "./Components/Ham"
+
+import Header from "./Components/Header"
+import About from './Components/About';
+import Works from './Components/Works';
+import Touch from './Components/Touch'
+
 
 function App() {
+
+  const [show, setShow] = useState(false)
+  const toggleShow = ()=> {
+    setShow(!show)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Dropdown show={show} />
+      <Ham toggle={show} toggleShow={toggleShow} onClick={()=>{toggleShow()}}/>
+        <Header />
+        <About />
+        <Works />
+        <Touch />
+
     </div>
   );
 }
