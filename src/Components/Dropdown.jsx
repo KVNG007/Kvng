@@ -5,9 +5,10 @@ import "../Styles/Dropdown.scss"
 
 const Dropdown = ({show}) => {
 
+  // var head = document.querySelectorAll(".head") 
+
   const menuRef = useRef();
   const tl = useRef();
-  const overlayRef = useRef();
   const textRef = useRef();
 
   useEffect(() => {
@@ -17,21 +18,22 @@ const Dropdown = ({show}) => {
 
     tl.current.to(menuRef.current, {
       top:0,
+      duration:0.01,
+      ease:'expo.inOut'
+    }).to(".overlay", {
+      width:"0%",
       duration:0.1,
       ease:'expo.inOut'
-    }).to(overlayRef.current,{
-      width:"0%",
-      // duration:0.4,
-      ease:'expo.inOut'
-    }).to(overlayRef.current,{
+    }).to(".overlay",{
+    // }).to(overlayRef.current,{
       width:"100%",
       right:0,
       ease:'expo.inOut'
-    }).to(textRef.current,{
+    }).to(".cover",{
       color: "black",
       duration:0,
     })
-    .to(overlayRef.current,{
+    .to(".overlay",{
       width:"0%",
       ease:'expo.inOut'
     })
@@ -56,10 +58,10 @@ const Dropdown = ({show}) => {
         <div className="menu">
           <h4>Menu</h4>
 
-          <h2 ref={textRef} className='cover'>Case Studies <div className={`overlay ${show ? "fash" : ""}` } ref={overlayRef}></div></h2>
-          <h2 className='cover'>Approach <div className="overlay"></div></h2>
-          <h2 className='cover'>Services <div className="overlay"></div></h2>
-          <h2 className='cover'>About Me <div className="overlay"></div></h2>
+          <h2 ref={textRef} className='cover'>About Me <div className="overlay" ></div></h2>
+          <h2 className='cover'>Work <div className="overlay "></div></h2>
+          <h2 className='cover'>Experience <div className="overlay"></div></h2>
+          <h2 className='cover'>Contact <div className="overlay"></div></h2>
         </div>
 
         <div className="contact">

@@ -1,11 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap'); 
 
-*::before, *::after{
+*, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     overflow-x:hidden;
 }
+
+@font-face {
+    font-family: "Gauss";
+    src: url("../Fonts/CarlGaussRegular-.otf"); 
+  }
+
+@font-face {
+    font-family: "SF-Mono";
+    src: url("../Fonts/SFMonoRegular.otf"); 
+  }
+
+@font-face {
+    font-family: "Diamond";
+    src: url("../Fonts/DiamondDust-m3a9.ttf"); 
+  }
+
+@font-face {
+    font-family: "Lovanaru";
+    src: url("../Fonts/LovanaruRegular-jEXwl.ttf"); 
+  }
+
+@font-face {
+    font-family: "StrangeLuv";
+    src: url("../Fonts/StrangeluvExtended-AL2aA.ttf"); 
+  }
 
 body{
     box-sizing: border-box;
@@ -13,7 +37,7 @@ body{
     margin: 0;
     padding: 0;
     font-family:'Fredoka', sans-serif;
-    background-color: rgb(246, 246, 246);
+    background-color:  #796228; 
     text-align: center;
 
 } 
@@ -98,94 +122,6 @@ header button:hover {
     background-color: rgb(167, 37, 65);
 }
 
-/* ABOUT ABOUT ABOUT */
-.about h3 {
-    padding:90px 0px 20px 0px;
-    margin:0;
-}
-.about p {
-    width:60%;
-    margin: auto;
-}
-.about button {
-    background-color: rgb(199, 44, 78);
-    color: #ffff;
-    padding:9px 15px;
-    margin:60px 0px 30px 0px;
-    display: inline block;
-    font-size: .7em;
-    text-decoration: none;
-    border:none;
-    border-radius:5em;
-}
-
-.doings {
-    display:flex;
-    justify-content: space-between;
-    padding: 50px 0px 80px 0px;
-}
-
-.doings h4 {
-    font-size:.8em;
-}
-.doings p {
-    width: 100%;
-    font-size:.8em;
-    padding: 5px 0px;
-}
-
-
-.works {
-    padding-top: 50px;
-}
-.works p {
-    width: 60%;
-    margin: auto;
-    padding-bottom: 30px;
-}
-.workings {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding-bottom:80px;
-}
-
-.workings img {
-    width: 240px;
-    height:200px;
-}
-
-#work-sp {
-    padding-top: 40px ;
-}
-
-/* TOUCH TOUCH TOUCH*/
-
-.touch {
-    text-align: center;
-    padding-top:50px;
-}
-.touch h3 {
-    padding-top:40px;
-}
-.touch button {
-    background-color: rgb(199, 44, 78);
-    color: #ffff;
-    padding:9px 15px;
-    margin:15px 0px 30px 0px;
-    display: inline block;
-    font-size: .7em;
-    text-decoration: none;
-    border:none;
-    border-radius:5em;
-}
-
-.touch__cont {
-    padding:30px 0px 50px 0px;
-}
-.touch__cont img {
-    padding:0px 5px;
-}
 
 
 
@@ -202,7 +138,6 @@ footer {
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap'); 
 
 /* body {
     box-sizing: border-box;

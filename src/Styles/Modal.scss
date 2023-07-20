@@ -1,0 +1,165 @@
+
+.Modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 500;
+
+    &__cont {
+        position: relative;
+        width: 550px;
+        height: 500px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 1em;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        clip-path: polygon(0% 49%, 1% 49%, 1% 51%, 0% 51%);
+        // transition: all .3s;
+        z-index: inherit;
+
+        .closer {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            place-content: center;
+
+            width: 50px ;
+            height: 50px;
+            cursor: pointer;
+
+            span {
+                position: relative;
+                width: 40px;
+                height: 5px;
+                border-radius: 1em;
+                background-color: rgb(42, 42, 42);
+                transform-origin: center center;
+                z-index: inherit;
+
+                &:nth-of-type(1) {
+                    transform:translateY(2px) rotate(45deg);
+
+                }
+                
+                &:nth-of-type(2) {
+                    transform:translateY(-2px) rotate(-45deg);
+                }
+            }
+
+            &:hover {
+                span {
+                    background-color: black ;
+                }
+            }
+        }
+
+        h1 {
+            font-family: "SF-Mono";
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: inherit;
+            text-align: left;
+
+            label {
+                color: black;
+                font-weight: 500;
+                font-family: inherit;
+                margin: 5px 0px;
+            }
+
+            input {
+                height: 40px;
+                margin-block: 0px 10px;
+                padding: 3px 5px;
+                font-size: 1em;
+                font-family: "SF-Mono";
+                border: none;
+                border-bottom: 2px solid black;
+                background-color: transparent;
+            }
+
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            input:-webkit-autofill:active
+            {
+                transition: background-color 5000s ease-in-out 0s;
+                // -webkit-text-fill-color: #fff !important;
+            }
+
+            textarea {
+                height: 70px;
+                margin: 10px 0px;
+                padding: 10px;
+                font-size: 1em;
+                font-family: "SF-Mono";
+                border: none;
+                border-bottom: 2px solid black;
+                background-color: transparent;
+            }
+
+            input:focus, textarea:focus {
+                outline: none;
+            }
+
+            button {
+                position: relative;
+                margin-top: 20px;
+                width: 100%;
+                height: 52px;
+                font-size: 1.25em;
+                font-weight: bold;
+                font-family: "SF-Mono"; 
+                border-radius: 1em;
+                background-color: transparent;
+                border: 1px solid rgb(144, 144, 144);
+                overflow: hidden;
+                z-index: 501;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 60px;
+                    height: 175px;
+                    background: rgba(255, 255, 255, 0.35);
+                    transform: skew(45deg) translateX(-150px);
+                    transition: all .3s ease-in-out;
+                    z-index: 499;
+                }
+
+                &:hover {
+                    transform: translateY(-3px);
+                    background-color: rgba(255, 255, 255, 0.05);
+                    &::before {
+                        transform: skew(45deg) translateX(550px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,23 @@
 .heading {
-    background-color: burlywood;
+    background-color:  rgb(81, 59, 8);
     height:100vh;
+    display:flex;
+    color: black;
+    align-items: center;
+    place-content: center;
+
+    h1 {
+        font-size: 12rem;
+        font-family: "Diamond";
+        padding-bottom: 30px;
+    }
 
     p{
-        padding:5em 0em;
+        font-size: 2em;
+        font-family: "Gauss";
+        color: white;
+        width:450px;
+        margin:1.2em auto;
+        text-align: left;
     }
 }

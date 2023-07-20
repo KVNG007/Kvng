@@ -5,9 +5,10 @@ const Header = () => {
   return (
     <header className='heading'>
       <div className="container">
-          <h1>David Arifalo</h1>
-          <p>UI / UX / FRONTEND</p>
-          <button type="submit" href="#">Download Resume</button>
+        <h1>David Arifalo.</h1>
+
+        <p>Front End Developer.</p>
+        
       </div>
     </header>
   )

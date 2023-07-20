@@ -1,25 +1,54 @@
-import React from 'react'
+import React , { useState } from 'react'
+import "../Styles/Works.scss"
+import { Lucid, Zuri, Distro, Provinci, Marlin } from "./Desc"
 
 const Works = () => {
+
+  const [progress, setProgress] = useState(2);
+
   return (
+
     <div className="works">
-        <div className="container">
-            <h3>MY WORKS</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Expedita voluptatibus, velit mollitia nihil dolores rerum!
-            </p>
-            <div className="workings">
-                <a href="./"><img src="./emmy5.jpg" alt="work" /></a>
-                <a href="./"><img src="./emmy5.jpg" alt="work" /></a>
-                <a href="./"><img src="./emmy5.jpg" alt="work" /></a>
-                <a href="./"><img src="./emmy5.jpg" alt="work" /></a>
-                <a href="./"><img src="./emmy5.jpg" alt="work" /></a>
-                <a href="./"><img src="./emmy5.jpg" alt="work" /></a>
+      <div className="container">
+        <div className='worked'>
+            <div className="worked__heading">
+              <h1><span>02. </span>Where I’ve Worked</h1>
             </div>
 
-        </div>
+            <div className="worked__body">
+
+              <div className='control'>
+                <aside>
+                  <span style={{top:`${progress * 60}px`,}}>
+
+                  </span>
+                </aside>
+
+                <ul>
+                  <li className={ progress === 0 ? "active" : ""} onClick={()=> setProgress(0)}>Lucid Jungles</li>
+                  <li className={ progress === 1 ? "active" : ""}onClick={()=> setProgress(1)}>Work Distro</li>
+                  <li className={ progress === 2 ? "active" : ""}onClick={()=> setProgress(2)}>Zuri Team</li>
+                  <li className={ progress === 3 ? "active" : ""}onClick={()=> setProgress(3)}>Provinci Media</li>
+                  <li className={ progress === 4 ? "active" : ""}onClick={()=> setProgress(4)}>Marlin Club</li>
+                </ul>
+              </div>
+
+              <div className='outlet'>
+                {progress === 0 ? <Lucid /> :
+                 progress === 1 ? <Distro /> :
+                 progress === 2 ? <Zuri /> :
+                 progress === 3 ? <Provinci /> :
+                 <Marlin />
+                 }
+              </div>
+            </div>
+
+          </div>
+      </div>
     </div>
   )
 }
 
-export default Works
+
+
+export default Works;
