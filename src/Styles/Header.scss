@@ -1,23 +1,109 @@
+@import "_mixins";
+
 .heading {
     background-color:  rgb(81, 59, 8);
     height:100vh;
     display:flex;
+    flex-direction: column;
     color: black;
     align-items: center;
     place-content: center;
+    text-align: left;
+   
 
-    h1 {
-        font-size: 12rem;
-        font-family: "Diamond";
-        padding-bottom: 30px;
-    }
-
-    p{
-        font-size: 2em;
-        font-family: "Gauss";
-        color: white;
-        width:450px;
-        margin:1.2em auto;
+    @include respond(phone) {
         text-align: left;
     }
+
+    &__cont {
+        display:flex;
+        flex-direction: column;
+        color: black;
+        align-items: flex-start;
+        text-align: left;
+        width: 90%;
+        margin: auto;
+
+        h4 {
+            font-family: "Exan";
+            font-weight: bold;
+            color: rgb(204, 196, 154);
+
+            @include respond(phone) {
+                font-size: .79em;
+            }
+        }
+    
+        h1 {
+            font-size: 7vw;
+            font-family: "Gauss";
+            margin: 15px 0px;
+    
+            @include respond(phone) {
+                
+            }
+        }
+    
+        p{
+            max-width:550px;
+            margin-block:5px 10px ;
+            font-size: 3vw;
+            font-family: "Gauss";
+            color: rgb(248, 239, 190);
+    
+            @include respond(phone) {
+                width: max-content;
+            }
+        }
+
+        h6 {
+            max-width: 80%;
+            margin-block: 15px 20px;
+            font-size: 1.1em;
+            font-family: "Exan";
+
+            @include respond(phone) {
+                max-width: 100%;
+                font-size: .8em;
+            }
+        }
+
+        button {
+            padding: 12px 25px;
+            font-family: "Exan";
+            background-color: transparent;
+            color: rgb(248, 239, 190);
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            align-items: center;
+            place-content: center;
+            border: 0.5px solid rgb(248, 239, 190);
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            
+            svg {
+                scale: .65;
+                transition: all .3s ease-in-out;
+                path {
+                    transition: all .3s ease-in-out;
+                    fill: rgb(248, 239, 190);
+                }
+            }
+
+            &:hover {
+                color: black;
+                border: 1.5px solid black;
+                font-weight: bold;
+                svg {
+                    scale: .55;
+                    transform: rotate(90deg);
+                    path {
+                        fill: black;
+                    }
+                }
+            }
+        }
+    }
+    
 }

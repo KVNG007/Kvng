@@ -1,8 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import gsap from "gsap"
+import emailjs from 'emailjs-com';
 import "../Styles/Modal.scss"
 
 const Modal = ({ showModal, setShowModal }) => {
+
+    const [formData, setFormData] = useState({name: "", email: "", message: ""});
+    const [sent, setSent] = useState(false)
 
     const tl = useRef();
     const modalRef = useRef();
@@ -32,18 +36,56 @@ const Modal = ({ showModal, setShowModal }) => {
 
     }, [])
 
-  useEffect(() => {
-    
-    showModal ? tl.current.play() : tl.current.reverse()
+    useEffect(() => {
+      
+      showModal ? tl.current.play() : tl.current.reverse()
 
-  }, [showModal])
-   
+    }, [showModal])
+
+
+    const handleInput = (event) => {
+      setFormData (prevFormData => {
+        return {
+            ...prevFormData,
+            [event.target.name]: event.target.value
+        }
+      })
+    }
+
+
+
+    const submitForm = (e) => {
+      e.preventDefault();
+
+      emailjs
+        .sendForm(
+          "service_putbq5j",
+          "template_51jgeq2",
+          e.target,
+          "7RIUUOejlIW9Fqx6y"
+        )
+        .then(
+          (result) => {
+            setSent(true);
+
+            setTimeout(() => {
+              setShowModal(false);
+              setSent(false);
+              setFormData({ name: "", email: "", message: "" });
+            }, 1500);
+          },
+          (error) => {
+            setSent(null);
+            console.log(error.text);
+          }
+        );
+      
+      e.target.reset();
+    }
 
   return (
-    // <div className="Modal" style={showModal ? {} : {display: "none",}}>
     <div className="Modal" >
         <div className="Modal__cont" ref={modalRef}>
-            {/* <button onClick={()=> setShowModal(false)}>close</button> */}
             <div className="closer" onClick={()=> setShowModal(false)}>
               <span></span>
               <span></span>
@@ -51,17 +93,17 @@ const Modal = ({ showModal, setShowModal }) => {
 
             <h1>Contact Me </h1>
 
-            <form>
+            <form onSubmit={(e)=> submitForm(e)}>
                 <label htmlFor="name">Name</label>
-                <input type="text"  name="name" />
+                <input type="text"  name="name" value={formData.name} onChange={handleInput} />
 
                 <label htmlFor="email">Email</label>
-                <input type="email"  name="email" />
+                <input type="email"  name="email" value={formData.email} onChange={handleInput} />
 
-                <label for="message">Message</label>
-                <textarea type="text" placeholder="Message" name="message" />
+                <label htmlFor="message">Message</label>
+                <textarea type="text" placeholder="Message" name="message" value={formData.message} onChange={handleInput} />
 
-                <button>Submit </button>
+                <button>{sent ? "Sent" : "Submit"} </button>
             </form>
         </div>
             

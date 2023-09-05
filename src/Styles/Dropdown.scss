@@ -1,29 +1,117 @@
+@import "./mixins.scss";
+
+
 .dropdown  {
-position:fixed;
-width:100vw;
-height:40vh;
-// background-color: rgb(212, 161, 89);
-// background-color:  #6f581f;
-background-color:  #745a1e;
-transition: top .6s ease-out;
-top:-40vh;
-z-index: 99;
+    position:fixed;
+    width:100vw;
+    height:42.5vh;
+    background-color:  #745a1e;
+    transition: top .6s ease-out;
+    top:-43vh;
+    z-index: 99;
+
+    @include respond(tab-port) {
+        height: 35vh;
+    }
+
+    @include respond(phone) {
+        height: 15vh;
+        top: -20vh;
+        display: none;
+    }
+}
+
+.dropdown2 {
+    position: fixed;
+    width: 60dvw;
+    height: 100dvh;
+    background-color:  #745a1e;
+    top: 0;
+    right: -65dvh;
+    display: none;
+    z-index: 90;
+
+    @include respond(phone) {
+        display: flex;
+        align-items: center;
+        place-content: center;
+    }
+
+    .menuu {
+        width: 95%;
+        margin: auto;
+        height: 52.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            font-family: "SF-Mono";
+            font-size: 1.2em;
+            span {
+                display: block;
+                font-size: .75em;
+                color: rgb(39, 28, 4);
+                padding-bottom: 5px;
+            }
+        }
+
+        a {
+            padding: 8px 15px;
+            width: max-content;
+            margin: 0 auto;
+            font-family: "Exan";
+            background-color: transparent;
+            color: rgb(248, 239, 190);
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            align-items: center;
+            place-content: center;
+            border: 0.5px solid rgb(248, 239, 190);
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            
+            svg {
+                scale: .55;
+                transform: rotate(90deg);
+                path {
+                    fill: rgb(248, 239, 190);
+                }
+            }
+            &:hover {
+                color: black;
+                border: 1.5px solid black;
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 
 
 .menu__flex {
-    width:90vw;
+    width:100%;
     margin-top:20px ;
+    padding-inline: 10vw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:flex-start;
+    gap: 18vw;
     align-items: center;
     text-align:left;
 
+    @include respond(tab-port) {
+        margin-top: 30px;
+        gap: 7.5vw;
+    }
+
     .menu {
-        // font-family: "Gauss";
+
         h4{
-            margin:15px 0px;
+            margin:12.5px 0px;
+            @include respond(phone) {
+                display: none;
+            }
         }
 
         h2 {
@@ -31,6 +119,8 @@ z-index: 99;
             width:max-content;
             position: relative;
             margin:5px 0px;
+            
+
             &::before {
                 content: " ";
                 position:absolute;
@@ -44,8 +134,19 @@ z-index: 99;
                 transition: all .25s ease-in;
             }
 
+            @include respond(tab-port) {
+                font-size: .75em;
+            }
+            @include respond(phone) {
+                font-size: 1.1em;
+            }
+
+           
+        }
+
+        .dos {
+            cursor:pointer;
             &:hover {
-                cursor:pointer;
 
                 &::before {
                     // transform-origin: right;
@@ -55,19 +156,43 @@ z-index: 99;
             }
         }
 
+        @include respond(phone) {
+            display: flex;
+            flex-direction: row;
+        }
+
     }
 
-        .contact {
-            h4{
-                margin:0px 0px 40px 0px;
-            }
+    .contact {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include respond(phone) {
+            display: none;
+        }
+
+        h4{
+            margin:0px 0px 40px 0px;
+        }
 
         .grid {
 
             display:grid;
             grid-template-columns: repeat(2,auto);
-            row-gap: 30px;
-            column-gap: 50px;
+            // row-gap: 30px;
+            // column-gap: 50px;
+            gap: 25px;
+
+            section {
+                @include respond(tab-port) {
+                    font-size: .75em;
+
+                    p {
+                        font-size: .9em;
+                    }
+                }
+            }
         }
     }
 
@@ -77,6 +202,10 @@ z-index: 99;
 .cover{
     position: relative;
     color:rgba(0, 0, 0, 0);
+
+    p {
+        letter-spacing: 1.5px;
+    }
 }
 
 .overlay {

@@ -1,3 +1,5 @@
+@import "./_mixins.scss";
+
 
 .footer {
     position: relative;
@@ -16,6 +18,10 @@
         p {
             font-family: "SF-Mono";
             font-size: 1.2em;
+
+            @include respond(phone) {
+                font-size: 1em;
+            }
         }
 
         h1 {
@@ -23,16 +29,29 @@
             margin: 50px auto;
             font-size: 3em;
             font-family: "Gauss";
+
+            @include respond(phone) {
+                margin: 0;
+                font-size: 2em;
+            }
         }
 
         h2 {
             max-width: 700px;
+            font-family: "fredoka";
+            // font-family: 'SF-Mono';
+            font-weight: 500;
             margin: 30px auto;
+
+            @include respond(phone) {
+                margin: 0;
+                font-size: 1.2em;
+            }
         }
 
         button {
             position: relative;
-            margin: 120px auto;
+            margin: 120px auto 100px;
             padding: 20px 40px;
             font-size: 1.2em;
             font-family: "SF-Mono";
@@ -65,6 +84,15 @@
                     clip-path: circle(100%);
                 }
             }
+
+            @include respond(phone) {
+                margin: auto;
+                scale: .8;
+            }
+        }
+
+        @include respond(phone) {
+            height: 100%;
         }
     }
 
@@ -168,7 +196,31 @@
         &:hover {
             color:#8b8e38
         }
+
+    }
+
+    .credit {
+
+        @include respond(phone) {
+            font-size: .75em;
+            padding-bottom: 10px ;
+        }
+    }
+
+
+    @include respond(phone) {
+
+        padding-top: 15dvh;
+        .container {
+            height: 100%;
+        }
     }
 }
 
-     
+
+@media(max-width: 920px) {
+
+    .mail, .sms {
+        display: none !important;
+    }
+}

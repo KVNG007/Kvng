@@ -4,91 +4,128 @@ import "../Styles/Projects.scss"
 import { ArrowRight2 } from "./Icons"
 
 const Touch = () => {
+
+
   return (
-    <div class="project__main">
-        <div className="container">
-            <div className="project">
-                <div className="project__heading">
-                    <h1><span>03. </span>Some Things I’ve Built</h1>
+    <div className="project__main">
+      <div className="container">
+        <div className="project">
+          <div className="project__heading">
+            <h1>
+              <span>03. </span>Some Things I’ve Built
+            </h1>
+          </div>
+
+          <a href="https://lucidjungles.io" target="_blank">
+            <section>
+              <div className="left">
+                <p>Featured Project</p>
+                <h2>LUCID JUNGLES</h2>
+                <div className="overflow">
+                  A gamified music palyer that lets you create all kinds of
+                  immersive musical experiences, convert your songs into
+                  customisable games, manage your digital identifier (Avatae),
+                  merch, tours and events from the comfort of your home.
                 </div>
 
-                <section> 
-                    <div className='left'>
-                        <p>Featured Project</p>
-                        <h2>LUCID JUNGLES</h2>
-                        <div className="overflow">
-                            A gamified music palyer that lets you create all kinds of immersive musical experiences, convert your songs into customisable games, manage your digital identifier (Avatae), merch, tours and events from the comfort of your home.
-                        </div>
+                <span>
+                  VS Code &nbsp; React.js &nbsp; SASS &nbsp; ReduxToolkit &nbsp;
+                  HTML
+                </span>
+              </div>
 
-                        <span>VS Code &nbsp; React.js &nbsp; SASS &nbsp; ReduxToolkit &nbsp; HTML</span>
-                        
-                    </div>
+              <div className="img__holder">
+                <img src="./assets/LUCID.png" alt="LUCID" />
+                <span>
+                  Visit <ArrowRight2 />
+                </span>
+              </div>
+            </section>
+          </a>
 
-                    <div className='img__holder'>
-                        <img src="./assets/LUCID.png" alt="LUCID" />
-                        <a href="https://lucidjungles.io">Visit <ArrowRight2 /></a>
-                    </div>
-                    
-                </section>
+          <a href="https://www.ipayseller.com/" target="_blank">
+            <aside>
+              <div className="img__holder">
+                <img src="./assets/hobaa.png" alt="LUCID" />
+                <span href="https://thefutureisnowhomes.com" target="_blank">
+                  Visit <ArrowRight2 />
+                </span>
+              </div>
 
-                <aside>
-                    <div className='img__holder'>
-                        <img src="./assets/NEAR.png" alt="LUCID" />
-                        <a href="#">Visit <ArrowRight2 /></a>
-                    </div>
+              <div className="left">
+                <p>Featured Project</p>
+                <h2>Hoba Herbal</h2>
+                <div className="overflow">
+                  iPaySeller is the wealth creation and marketing platform for
+                  Hoba herbal products. Here, interested Affiliates can take
+                  advantage of our business empowerment program, giving them
+                  access to income and financial freedom.
+                </div>
 
-                    <div className='left'>
-                        <p>Solo Project</p>
-                        <h2>NEAR CLONE</h2>
-                        <div className="overflow">
-                            A minimal, dark blue theme for VS Code,
-                            Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-                        </div>
+                <span>
+                  VS Code &nbsp; HTML &nbsp; CSS &nbsp; JAVASCRIPT &nbsp; SWIPER
+                </span>
+              </div>
+            </aside>
+          </a>
 
-                        <span> HTML &nbsp; SASS &nbsp; JavaScript &nbsp; React.js &nbsp; VS Code</span>
-                            
-                    </div>
+          <a href="http://thefutureisnowhomes.com" target="_blank">
+            <section>
+              <div className="left">
+                <p>Featured Project</p>
+                <h2>FUTURE HOMES</h2>
+                <div className="overflow">
+                  The Future is Now Homes is a real estate company that provides
+                  housing solutions to its customers at different locations
+                  within Nigeria securing properties for greater value and
+                  profits.
+                </div>
 
-                </aside>
+                <span>
+                  VS Code &nbsp; React.js &nbsp; ReduxToolkit &nbsp; Express
+                  &nbsp; MongoDB
+                </span>
+              </div>
 
-                <section>
-                    <div className='left'>
-                        <p>Featured Project</p>
-                        <h2>Halcyon Theme</h2>
-                        <div className="overflow">
-                            A minimal, dark blue theme for VS Code,
-                            Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-                        </div>
+              <div className="img__holder">
+                <img src="./assets/TFINH.png" alt="LUCID" />
+                <span href="https://thefutureisnowhomes.com" target="_blank">
+                  Visit <ArrowRight2 />
+                </span>
+              </div>
+            </section>
+          </a>
 
-                        <span>VS Code &nbsp; Sublime Text &nbsp; Atom &nbsp; iTerm2 &nbsp; Hyper</span>
-                        
-                    </div>
-                    <div className='img__holder'>
+          <a
+            href="https://sensational-jelly-e7f0d4.netlify.app"
+            target="_blank"
+          >
+            <aside>
+              <div className="img__holder">
+                <img src="./assets/NEAR.png" alt="LUCID" />
+                <span href="https://lucidjungles.io" target="_blank">
+                  Visit <ArrowRight2 />
+                </span>
+              </div>
 
-                    </div>
-                    
-                </section>
+              <div className="left">
+                <p>Solo Project</p>
+                <h2>NEAR CLONE</h2>
+                <div className="overflow">
+                  A simple clone of the NEAR website, Created entirely using
+                  ReactJs and hosted using free hosting service from netlify.
+                </div>
 
-                <aside>
-                    <div className='img__holder'>
+                <span>
+                  {" "}
+                  HTML &nbsp; SASS &nbsp; JavaScript &nbsp; React.js &nbsp; VS
+                  Code
+                </span>
+              </div>
+            </aside>
+          </a>
 
-                    </div>
-
-                    <div className='left'>
-                        <p>Featured Project</p>
-                        <h2>Halcyon Theme</h2>
-                        <div className="overflow">
-                            A minimal, dark blue theme for VS Code,
-                            Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-                        </div>
-
-                        <span>VS Code &nbsp; Sublime Text &nbsp; Atom &nbsp; iTerm2 &nbsp; Hyper</span>
-                            
-                    </div>
-
-                </aside>
-
-                <div className="others">
+          {/* <div className="others">
                     <h2>Other Noteworthy Projects.</h2>
                     <div className='others__cont'>
                         <section className='sects'>
@@ -177,15 +214,13 @@ const Touch = () => {
                             </ul>
                         </section>
                     </div>
-                </div>
-
-            </div>
+                </div> */}
         </div>
+      </div>
 
-        {/* <footer>&copy; 2022 David Arifalo. Made with love and zero transitions...yet!</footer> */}
+      {/* <footer>&copy; 2022 David Arifalo. Made with love and zero transitions...yet!</footer> */}
     </div>
-
-)
+  );
 }
 
 export default Touch

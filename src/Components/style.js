@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 export const Slide = styled(motion.h1)`
 font-family: "Gauss";
 color: black;
-font-size:16em;
+font-size:15vw;
 z-index:2;
 margin:0;
 white-space:nowrap;

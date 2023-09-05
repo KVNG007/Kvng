@@ -9,33 +9,32 @@ const Footer = ({ setShowModal }) => {
             <div className="footer__cont">
                 <p>04. &nbsp;What’s Next?</p>
                 <h1>Get In Touch</h1>
-                <h2> I’m currently looking for any new opportunities, my inbox is always open. Whether you have a question
-                    or just want to say hi, I’ll try my best to get back to you!🚀
+                <h2> I’m currently looking for new opportunities, my inbox is always open. Whether you have a project
+                    or just want to say hi, I’ll try as much as possible to get back to you!🚀
                 </h2>
 
                 <div className='button'>
                     <button onClick={()=> setShowModal(true)}> Contact Me</button>
                 </div>
 
-                <p> Built by David Arifalo</p>
+                <p className='credit'> Built by David Arifalo</p>
             </div>
         </div>
 
-        <p className="mail">davidarifalo001@gmail.com</p>
+        <a href="mailto:davidarifalo001@gmail.com" target='_blank' className="mail">davidarifalo001@gmail.com</a>
+        
         <div className="sms">
-            <div className="sms_cont">
+            <a href='https://github.com/KVNG007' target='_blank' className="sms_cont">
                 <img src="./assets/github-svg1.svg" alt="git" />
-            </div>
+            </a>
 
-            <div className="sms_cont">
+            <a href='https://www.linkedin.com/in/david-arifalo-b5465a129/' target='_blank' className="sms_cont">
                 <img src="./assets/twitter-svg4.svg" alt="twitter" />
-            </div>
+            </a>
 
-            <div className="sms_cont">
+            <a href='https://twitter.com/Kvng_Dheyvied' target='_blank' className="sms_cont">
                 <img src="./assets/linkedin-svg2.svg" alt="linkedIn" />
-            </div>
-
-            {/* <img src="" alt="" /> */}
+            </a>
         </div>
     </div>
   )

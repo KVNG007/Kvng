@@ -1,9 +1,10 @@
 import React from 'react'
+
 export const Lucid = () => {
     return (
       <div className='recent'>
         <h1>Front End Developer <span>@ LucidJungles.io</span></h1>
-        <p> April 2022 - Present</p>
+        <p> April 2022 - Present 😁</p>
         <ul>
             <li>Developed and styled interactive web applications and simple games for a gamified music player</li>
 

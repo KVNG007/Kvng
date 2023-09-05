@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import './App.scss';
 import './Styles/main.css'
 
@@ -17,7 +17,8 @@ import Modal from "./Components/Modal"
 function App() {
 
   const [show, setShow] = useState(false)
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+
 
 
   const toggleShow = ()=> {
@@ -26,7 +27,8 @@ function App() {
 
   return (
     <div className="App">
-      <Dropdown show={show} />
+      <div className={show ? "blurr blockk" : "blurr"} ></div>
+      <Dropdown show={show} setShow={setShow} />
       <Ham toggle={show} toggleShow={toggleShow} onClick={()=>{toggleShow()}}/>
       <Header />
       <About />
