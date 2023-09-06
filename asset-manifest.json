@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/github.io/Kvng/static/css/main.bb223917.css",
-    "main.js": "/github.io/Kvng/static/js/main.73e2d2a3.js",
-    "static/media/DiamondDust-m3a9.ttf": "/github.io/Kvng/static/media/DiamondDust-m3a9.fe3d341915712d26302d.ttf",
-    "static/media/Poppins-Regular.ttf": "/github.io/Kvng/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
-    "static/media/StrangeluvExtended-AL2aA.ttf": "/github.io/Kvng/static/media/StrangeluvExtended-AL2aA.c871d95e71afc998d472.ttf",
-    "static/media/CarlGaussRegular-.otf": "/github.io/Kvng/static/media/CarlGaussRegular-.0776637eaed9284cb93b.otf",
-    "static/media/LovanaruRegular-jEXwl.ttf": "/github.io/Kvng/static/media/LovanaruRegular-jEXwl.a8d3f93fbe7455a3947b.ttf",
-    "static/media/SFMonoRegular.otf": "/github.io/Kvng/static/media/SFMonoRegular.1d07f933cdf138950a80.otf",
-    "static/media/Exan-Regular.ttf": "/github.io/Kvng/static/media/Exan-Regular.cad2ee179050f58b79c3.ttf",
-    "index.html": "/github.io/Kvng/index.html",
-    "main.bb223917.css.map": "/github.io/Kvng/static/css/main.bb223917.css.map",
-    "main.73e2d2a3.js.map": "/github.io/Kvng/static/js/main.73e2d2a3.js.map"
+    "main.css": "/Kvng/static/css/main.f8ac0d76.css",
+    "main.js": "/Kvng/static/js/main.41c62a05.js",
+    "static/media/DiamondDust-m3a9.ttf": "/Kvng/static/media/DiamondDust-m3a9.fe3d341915712d26302d.ttf",
+    "static/media/Poppins-Regular.ttf": "/Kvng/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/StrangeluvExtended-AL2aA.ttf": "/Kvng/static/media/StrangeluvExtended-AL2aA.c871d95e71afc998d472.ttf",
+    "static/media/CarlGaussRegular-.otf": "/Kvng/static/media/CarlGaussRegular-.0776637eaed9284cb93b.otf",
+    "static/media/LovanaruRegular-jEXwl.ttf": "/Kvng/static/media/LovanaruRegular-jEXwl.a8d3f93fbe7455a3947b.ttf",
+    "static/media/SFMonoRegular.otf": "/Kvng/static/media/SFMonoRegular.1d07f933cdf138950a80.otf",
+    "static/media/Exan-Regular.ttf": "/Kvng/static/media/Exan-Regular.cad2ee179050f58b79c3.ttf",
+    "index.html": "/Kvng/index.html",
+    "main.f8ac0d76.css.map": "/Kvng/static/css/main.f8ac0d76.css.map",
+    "main.41c62a05.js.map": "/Kvng/static/js/main.41c62a05.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb223917.css",
-    "static/js/main.73e2d2a3.js"
+    "static/css/main.f8ac0d76.css",
+    "static/js/main.41c62a05.js"
   ]
 }
