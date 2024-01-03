@@ -1,7 +1,7 @@
 @import "_mixins";
 
 .heading {
-    background-color:  rgb(81, 59, 8);
+    background-color: whitesmoke;
     height:100vh;
     display:flex;
     flex-direction: column;
@@ -9,6 +9,8 @@
     align-items: center;
     place-content: center;
     text-align: left;
+
+    
    
 
     @include respond(phone) {
@@ -16,13 +18,13 @@
     }
 
     &__cont {
+        // margin-top: 10dvh;
+        color: black;
         display:flex;
         flex-direction: column;
-        color: black;
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
+        text-align: center;
         width: 90%;
-        margin: auto;
 
         h4 {
             font-family: "Exan";
@@ -35,9 +37,20 @@
         }
     
         h1 {
-            font-size: 7vw;
+            font-size: 3.75vw;
             font-family: "Gauss";
             margin: 15px 0px;
+
+            span {
+                font-family: "Fira";
+                font-size: 1.2vw;
+                color: $color-blue;
+            }
+
+            small {
+                font-size: 1.5vw;
+                font-family: "Fira";
+            }
     
             @include respond(phone) {
                 
@@ -57,10 +70,15 @@
         }
 
         h6 {
-            max-width: 80%;
+            max-width: 100%;
+            max-width: 960px;
             margin-block: 15px 20px;
-            font-size: 1.1em;
-            font-family: "Exan";
+            font-size: .95em;
+            font-family: "Fira";
+            font-weight:normal;
+            line-height: 1.5em;
+            text-align: center;
+            text-justify: inter-word;
 
             @include respond(phone) {
                 max-width: 100%;
@@ -68,18 +86,23 @@
             }
         }
 
+
         button {
-            padding: 12px 25px;
+            padding: 10px 20px;
+            margin: 5px;
             font-family: "Exan";
+            font-weight: bold;
             background-color: transparent;
-            color: rgb(248, 239, 190);
+            color: rgb(0, 0, 0);
             display: flex;
             flex-direction: row;
             gap: 5px;
             align-items: center;
             place-content: center;
-            border: 0.5px solid rgb(248, 239, 190);
+            border: 1.5px solid rgb(0, 0, 0);
             cursor: pointer;
+            // transition: color 200ms ease-in,box-shadow 200ms ease-in,-webkit-box-shadow 200ms ease-in;
+
             transition: all .3s ease-in-out;
             
             svg {
@@ -87,16 +110,16 @@
                 transition: all .3s ease-in-out;
                 path {
                     transition: all .3s ease-in-out;
-                    fill: rgb(248, 239, 190);
+                    fill: rgb(0, 0, 0);
                 }
             }
 
             &:hover {
-                color: black;
-                border: 1.5px solid black;
-                font-weight: bold;
+                transform: translate(-5px, -5px);
+                box-shadow: 5px 5px 0 rgb(0, 0, 0);
+
                 svg {
-                    scale: .55;
+                    // scale: .55;
                     transform: rotate(90deg);
                     path {
                         fill: black;
@@ -106,4 +129,123 @@
         }
     }
     
+}
+
+
+
+
+
+
+.waves {
+    width: 100%;
+    overflow: hidden !important;
+  }
+  
+  .waves > g > use  {
+    font-family: fira code,Menlo,Courier;
+    color: var(--black-12);
+    font-size: 15px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    transform: translateX(50px);
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    animation-delay: -2s;  
+  }
+  
+  .waves > g > use:nth-child(1) {
+    animation-duration: 8s;
+  }
+  .waves > g > use:nth-child(2) {
+    animation-duration: 12s;
+  }
+  .waves > g > use:nth-child(3) {
+    animation-duration: 14s;
+  }
+  .waves > g > use:nth-child(4) {
+    animation-duration: 20s;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.maq-hol {
+    width: 100%;
+    background-color: purple;
+    white-space: nowrap ;
+    position: relative;
+
+    &:hover .Marquee {
+        animation-play-state: paused;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 200px;
+        background-image: linear-gradient(to left, rgba(255,255,255,0), whitesmoke);
+        z-index: 2;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 200px;
+        background-image: linear-gradient(to right, rgba(255,255,255,0), whitesmoke);
+        z-index: 2;
+    }
+
+}
+
+.Marquee {
+    display: inline-block;
+    overflow: hidden !important;
+    animation: 35s slidurrr infinite linear;
+
+    p {
+        width: 175px;
+        display: inline-block;
+        height: 50px;
+        margin: 0 40px;
+        // padding: 20px 40px;
+    }
+}
+
+@keyframes move-forever {
+    0% {
+    -webkit-transform: translate3d(-90px,0,0);
+    transform: translate3d(-90px,0,0);
+  }
+  
+  100% {
+    -webkit-transform: translate3d(85px,0,0);
+    transform: translate3d(85px,0,0);
+  }
+}
+
+@keyframes slidurrr {
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
