@@ -10,7 +10,92 @@
     place-content: center;
     text-align: left;
 
-    
+    nav {
+        width: 100%;
+
+        .nav__cont {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                width: 50px;
+                cursor: pointer;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 35px;
+                transition: all .3s ease-in-out;
+                cursor: pointer;
+
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: end;
+                    gap: 10px;
+
+                    &:hover {
+                        color: rgba(37, 104, 237);
+                    }
+
+                    span {
+                        color: rgba(37, 104, 237);
+                        font-family: "SF-Mono";
+                        font-size: 16px;
+                    }
+
+                }
+
+                button {
+                    padding: 7px 30px;
+                    margin: 5px;
+                    font-family: "Exan";
+                    font-weight: bold;
+                    background-color: transparent;
+                    color: rgb(0, 0, 0);
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                    align-items: center;
+                    place-content: center;
+                    border: 1.5px solid rgb(0, 0, 0);
+                    cursor: pointer;
+                    // transition: color 200ms ease-in,box-shadow 200ms ease-in,-webkit-box-shadow 200ms ease-in;
+        
+                    transition: all .3s ease-in-out;
+                    
+                    svg {
+                        scale: .65;
+                        transition: all .3s ease-in-out;
+                        path {
+                            transition: all .3s ease-in-out;
+                            fill: rgb(0, 0, 0);
+                        }
+                    }
+        
+                    &:hover {
+                        transform: translate(-5px, -5px);
+                        box-shadow: 5px 5px 0 rgb(0, 0, 0);
+        
+                        svg {
+                            // scale: .55;
+                            transform: rotate(90deg);
+                            path {
+                                fill: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
    
 
     @include respond(phone) {
@@ -18,23 +103,13 @@
     }
 
     &__cont {
-        // margin-top: 10dvh;
+        width: 100%;
+        margin-top: 20dvh;
         color: black;
         display:flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 90%;
-
-        h4 {
-            font-family: "Exan";
-            font-weight: bold;
-            color: rgb(204, 196, 154);
-
-            @include respond(phone) {
-                font-size: .79em;
-            }
-        }
     
         h1 {
             font-size: 3.75vw;
@@ -56,18 +131,7 @@
                 
             }
         }
-    
-        p{
-            max-width:550px;
-            margin-block:5px 10px ;
-            font-size: 3vw;
-            font-family: "Gauss";
-            color: rgb(248, 239, 190);
-    
-            @include respond(phone) {
-                width: max-content;
-            }
-        }
+        
 
         h6 {
             max-width: 100%;
@@ -86,6 +150,9 @@
             }
         }
 
+        .doings__btn{
+            margin-top: 5dvh;
+        }
 
         button {
             padding: 10px 20px;
@@ -187,6 +254,7 @@
     background-color: purple;
     white-space: nowrap ;
     position: relative;
+    transform: rotate(-5deg);
 
     &:hover .Marquee {
         animation-play-state: paused;

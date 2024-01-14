@@ -26,22 +26,39 @@ const Header = () => {
       </g>
     </svg>
   );
+
+
   
   return (
     <header className="heading">
+      <nav>
+        <div className="container">
+          <div className="nav__cont">
+            {/* <span>KVNG</span> */}
+            <img src="/assets/pic/crown2.png" alt="" className='pulse' />
+            <ul>
+              <li className='pulse'> <span>01.</span>About</li>
+              <li className='pulse'> <span>02.</span>Experience</li>
+              <li className='pulse'> <span>03.</span>Work</li>
+              <li className='pulse'> <span>04.</span>Contact</li>
+              <button className='btn'>
+                Resume
+            </button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       <div className="container">
         <div className="heading__cont">
-          {/* <h4>Hi, my name is </h4> */}
-          {/* <h1>David Arifalo</h1> */}
-          {/* <p>I'm a Front-End Developer.</p> */}
           <h1>David Arifalo<small>, </small><span>Front-end Developer <small>.</small></span></h1>
           <h6>
             Hi there, I'm David, a passionate front-end developer with a love for creating captivating & responsive web experiences.
-            With my dedication to clean code & user-centric design. I bring designs to life and turn ideas into pixel-perfect reality. 💪🏽
+            With my dedication to clean code & user-centric design, I bring designs to life and turn ideas into pixel-perfect reality. 💪🏽
           </h6>
 
 
-          <ScrollIntoView selector=".project__main">
+          <ScrollIntoView className='doings__btn' selector=".project__main">
             <button className='btn'>
               View My Doings <ArrowRight2 />{" "}
             </button>
@@ -51,26 +68,26 @@ const Header = () => {
 
         {/* <div className="maq-hol">
           <div className="Marquee">
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
           </div>
           <div className="Marquee">
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
-            <p>log0 1</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
+            <p>KVNGING</p>
           </div>
         </div> */}
       </div>

@@ -103,6 +103,8 @@ export function ChangeCursor2() {
 		const modals = Array.from(document.getElementsByClassName("containerr"));
 		const lists = Array.from(document.getElementsByClassName(`item`));
 
+		const pulse = Array.from(document.getElementsByClassName(`pulse`));
+
 		const links = Array.from(document.getElementsByTagName(`A`));
 
 		const icons = Array.from(document.getElementsByClassName(`icon`));
@@ -143,6 +145,18 @@ export function ChangeCursor2() {
 			list.addEventListener("mouseout", () => {
 				cursor.classList.remove(`text`);
 				ring.classList.remove(`text`);
+			});
+		});
+
+		pulse.forEach((pulse) => {
+			pulse.addEventListener("mouseover", () => {
+				cursor.classList.add(`button`);
+				ring.classList.add(`button`);
+			});
+
+			pulse.addEventListener("mouseout", () => {
+				cursor.classList.remove(`button`);
+				ring.classList.remove(`button`);
 			});
 		});
 
