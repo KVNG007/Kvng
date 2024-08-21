@@ -64,14 +64,15 @@
                     display: flex;
                     align-items: center;
                     padding-left:2px;
-                    color: #8b8e38;
-
+                    color: rgb(78, 78, 78);
+                    
                     span {
                         font-size: .8em;
                         font-family: "SF-Mono";
                         font-weight: bold;
                         margin-right: 20px;
-                        color: #8b8e38;
+                        // color: #8b8e38;
+                        color: rgb(78, 78, 78);
                     }
 
                     &::after {

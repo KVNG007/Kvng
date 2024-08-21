@@ -136,3 +136,13 @@ a {
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
+
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+.no-scroll {
+  overflow: scroll !important;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

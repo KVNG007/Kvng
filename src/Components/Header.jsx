@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import "../Styles/Header.scss"
 import ScrollIntoView from 'react-scroll-into-view'
 import { ArrowRight2 } from './Icons'
+import { RxHamburgerMenu } from 'react-icons/rx'
 
 
 const Header = () => {
@@ -37,14 +38,27 @@ const Header = () => {
             {/* <span>KVNG</span> */}
             <img src="/assets/pic/crown2.png" alt="" className='pulse' />
             <ul>
-              <li className='pulse'> <span>01.</span>About</li>
-              <li className='pulse'> <span>02.</span>Experience</li>
-              <li className='pulse'> <span>03.</span>Work</li>
-              <li className='pulse'> <span>04.</span>Contact</li>
+              <ScrollIntoView selector='.about'>
+                <li className='pulse'> <span>01.</span>About</li>                
+              </ScrollIntoView>
+
+              <ScrollIntoView selector='.works'>
+                <li className='pulse'> <span>02.</span>Experience</li>                
+              </ScrollIntoView>
+
+              <ScrollIntoView selector='.project__main'>
+                <li className='pulse'> <span>03.</span>Work</li>                
+              </ScrollIntoView>
+
+              <ScrollIntoView selector='.footer'>
+                <li className='pulse'> <span>04.</span>Contact</li>                
+              </ScrollIntoView>
+
               <button className='btn'>
                 Resume
             </button>
             </ul>
+            <RxHamburgerMenu size={30} className='hamburger' />
           </div>
         </div>
       </nav>

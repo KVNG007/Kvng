@@ -32,13 +32,13 @@
                 justify-content: space-between;
                 gap: 35px;
                 transition: all .3s ease-in-out;
-                cursor: pointer;
 
                 li {
                     display: flex;
                     flex-direction: row;
                     align-items: end;
                     gap: 10px;
+                    cursor: none;
 
                     &:hover {
                         color: rgba(37, 104, 237);
@@ -92,7 +92,21 @@
                         }
                     }
                 }
+
+                @include respond(phone) {
+                    display: none;
+                }
+                
             }
+
+            .hamburger {
+                display: none;
+                @include respond(phone) {
+                    display: block;
+                }
+            }
+
+            
         }
 
     }
@@ -104,7 +118,8 @@
 
     &__cont {
         width: 100%;
-        margin-top: 20dvh;
+        margin-top: 15dvh;
+        overflow-y: hidden;
         color: black;
         display:flex;
         flex-direction: column;

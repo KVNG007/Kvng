@@ -4,7 +4,8 @@
 .works {
     height: 100vh;
     width: 100vw;
-    background-color:  rgb(81, 59, 8);
+    // background-color:  rgb(81, 59, 8);
+    background-color: whitesmoke;
     overflow: hidden;
 
     
@@ -50,14 +51,14 @@
                 display: flex;
                 align-items: center;
                 padding-left:2px;
-                color: #8b8e38;
+                color:  rgba(37, 104, 237);
 
                 span {
                     font-size: .8em;
                     font-family: "SF-Mono";
                     font-weight: bold;
                     margin-right: 20px;
-                    color: #8b8e38;
+                    color: inherit;
                 }
 
                 &::after {
@@ -69,7 +70,7 @@
                     height: 1px;
                     margin-left: 20px;
                     margin-top: 5px;
-                    background-color:#8b8e38;
+                    background-color: rgba(37, 104, 237);
                     @include respond(phone) {
                         margin-top: 7px;
                     }
@@ -104,7 +105,7 @@
                     position: relative;
                     height: 300px;
                     width: 1px;
-                    background-color: #8b8e38;
+                    background-color:  rgba(37, 104, 237);
                     box-sizing: border-box;
                     
                     span {
@@ -114,7 +115,7 @@
                         left:-2px;
                         width: 4px;
                         height: 60px;
-                        background-color:#040402;
+                        background-color:  rgba(37, 104, 237);
                         transition: all .3s ease-in-out;
                         // z-index: 5;
                     
@@ -144,13 +145,14 @@
                         transition: all .3s ease-in-out;
 
                         &:hover {
-                            background-color: rgb(110, 81, 12) ;
+                            background-color:   rgba(37, 104, 237, 0.2) ;
+                            color: rgb(85, 85, 85);
                         }
                     }
 
                     .active {
-                        color: #8b8e38 ;
-                        background-color: rgb(110, 81, 12) ;
+                        color: white ;
+                        background-color:  rgba(37, 104, 237, 0.8) ;
                     }
 
                 }
@@ -178,7 +180,7 @@
                         font-weight: bold;
                         margin-bottom: 15px;
                         span{
-                            color:  #8b8e38;
+                            color:   rgba(37, 104, 237);
                         }
 
                         @include respond(desktop) {
@@ -192,7 +194,7 @@
                     p {
                         font-family: "SF-Mono";
                         font-weight: bold;
-                        color: #8b8e38 ;
+                        color:  rgba(37, 104, 237) ;
 
                         @include respond(desktop) {
                             font-size: .9em;
@@ -220,8 +222,8 @@
                                 top: 0%;
                                 left: 0px;
                                 overflow: hidden;
-                                color: #8b8e38;
-                                font-size: #8b8e38;
+                                color:  rgba(37, 104, 237);
+                                font-size:  rgba(37, 104, 237);
                                 // line-height: 12px;
                             }
                             

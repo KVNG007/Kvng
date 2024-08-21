@@ -23,14 +23,14 @@
                 padding-left:2px;
                 display: flex;
                 align-items: center;
-                color: #8b8e38;
+                color:  rgba(37, 104, 237);
 
                 span {
                     font-size: .8em;
                     font-family: "SF-Mono";
                     font-weight: bold;
                     margin-right: 20px;
-                    color: #8b8e38;
+                    color:  rgba(37, 104, 237);
                 }
 
                 &::after {
@@ -42,7 +42,7 @@
                     height: 1px;
                     margin-left: 20px;
                     margin-top: 5px;
-                    background-color:#8b8e38;
+                    background-color:  rgba(37, 104, 237);
                 }
 
                 @include respond(phone) {
@@ -89,6 +89,7 @@
                 h2 {
                     font-family: "Gauss";
                     margin:25px 0px;
+                    color:  rgb(93, 140, 235);
 
                     @include respond(phone) {
                         font-size: 1.4em;
@@ -100,7 +101,9 @@
                     width: 650px;
                     padding: 20px 25px;
                     margin-bottom: 20px;
-                    background-color: #8b8e38;
+                    background-color:  rgb(93, 140, 235);
+                    // rgba(37, 104, 237)
+                    color: white;
                     border-radius: .2em;
 
                     @include respond(tab-port) {
@@ -306,6 +309,7 @@
                 h2 {
                     font-family: "Gauss";
                     margin:25px 0px;
+                    color:  rgb(93, 140, 235);
 
                     @include respond(phone) {
                         font-size: 1.4em;
@@ -318,7 +322,8 @@
                     width: 650px;
                     padding: 20px 25px;
                     margin-bottom: 20px;
-                    background-color: #8b8e38;
+                    background-color:  rgb(93, 140, 235);
+                    color: white;
                     border-radius: .2em;
 
                     @include respond(tab-port) {
@@ -476,6 +481,7 @@
             }
         }
 
+        
 
 
 
@@ -577,6 +583,7 @@
         // }
 
     }
+
 
     @include respond(phone) {
         padding: 60px 0px;
