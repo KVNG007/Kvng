@@ -57,9 +57,11 @@ const Header = () => {
                 <li className='pulse'> <span>04.</span>Contact</li>                
               </ScrollIntoView>
 
-              <button className='btn'>
-                Resume
-            </button>
+              <a href="./David Arifalo Resume.pdf" download >
+                <button className='btn'>
+                  Resume
+                </button>              
+              </a>
             </ul>            
             <RxHamburgerMenu size={30} className='hamburger' onClick={()=> setShowHam(true)}/>
 
@@ -82,9 +84,11 @@ const Header = () => {
                 <li className='pulse'> <span>04.</span>Contact</li>                
               </ScrollIntoView>
 
-              <button className='btn'>
-                Resume
-              </button>
+              <a href="./David Arifalo Resume.pdf" download  onClick={()=> setShowHam(false)} >
+                <button className='btn'>
+                  Resume
+                </button>              
+              </a>
             </ul>
           </div>
         </div>

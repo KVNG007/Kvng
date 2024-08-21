@@ -16,7 +16,7 @@ const Touch = () => {
             </h1>
           </div>
 
-          <a href="https://lucidjungles.io" target="_blank">
+          <a href="https://lucidjungles.netlify.app/" target="_blank">
             <section>
               <div className="left">
                 <p>Featured Project</p>
