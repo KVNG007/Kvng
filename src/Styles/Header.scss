@@ -106,6 +106,75 @@
                 }
             }
 
+            .menuu {
+                display: none;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-around;
+                text-align: left;
+                gap: 40px 35px;
+                width: 280px;
+                padding: 30px;
+                height: 100dvh;
+                background-color: rgb(63, 120, 235);
+                position: fixed;
+                top: 0;
+                z-index: 100;
+                left:105% ;
+                transition: all .35s ease-in-out;
+
+                .closa {
+                    position: absolute;
+                    top: 20px;
+                    right: 40px;
+                }
+
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    color: white;
+                    align-items: end;
+                    gap: 10px;
+                    cursor: none;
+                    font-family: 'Gauss';
+
+                    span {
+                        color: rgb(0, 0, 0);
+                        font-family: "SF-Mono";
+                        font-size: 12px;
+                    }
+
+                }
+
+                button {
+                    padding: 7px 30px;
+                    margin: 5px;
+                    font-family: "Exan";
+                    font-weight: bold;
+                    background-color: transparent;
+                    color: rgb(0, 0, 0);
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                    align-items: center;
+                    place-content: center;
+                    border: 1.5px solid rgb(0, 0, 0);
+                    cursor: pointer;
+                    // transition: color 200ms ease-in,box-shadow 200ms ease-in,-webkit-box-shadow 200ms ease-in;
+        
+                    transition: all .3s ease-in-out;
+                    transform: translate(-5px, -5px);
+                    box-shadow: 5px 5px 0 rgb(0, 0, 0);
+                }
+
+                @include respond(phone) {
+                    display: flex;                    
+                }
+            }
+
+            .zactive {
+                transform: translateX(-100%);
+            }
             
         }
 
@@ -143,7 +212,20 @@
             }
     
             @include respond(phone) {
-                
+                font-size: 6vw;
+                font-family: "Gauss";
+                margin: 15px 0px;
+
+                span {
+                    font-family: "Fira";
+                    font-size: 2.2vw;
+                    color: $color-blue;
+                }
+
+                small {
+                    font-size: 3.5vw;
+                    font-family: "Fira";
+                }
             }
         }
         
@@ -161,12 +243,16 @@
 
             @include respond(phone) {
                 max-width: 100%;
-                font-size: .8em;
+                font-size: .6em;
             }
         }
 
         .doings__btn{
             margin-top: 5dvh;
+
+            @include respond(phone) {
+                scale: .8;
+            }
         }
 
         button {
@@ -208,6 +294,14 @@
                     }
                 }
             }
+
+            @include respond(phone) {
+                font-size: .7em;
+            }
+        }
+
+        @include respond(phone) {
+            margin-top:5dvh ;
         }
     }
     
@@ -221,9 +315,14 @@
 .waves {
     width: 100%;
     overflow: hidden !important;
-  }
-  
-  .waves > g > use  {
+
+    @include respond(phone) {
+        scale: 1.2;
+        // transform: translateY(-0px);
+    }
+}
+
+.waves > g > use  {
     font-family: fira code,Menlo,Courier;
     color: var(--black-12);
     font-size: 15px;
@@ -235,20 +334,20 @@
     transform: translateX(50px);
     animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
     animation-delay: -2s;  
-  }
-  
-  .waves > g > use:nth-child(1) {
-    animation-duration: 8s;
-  }
-  .waves > g > use:nth-child(2) {
-    animation-duration: 12s;
-  }
-  .waves > g > use:nth-child(3) {
-    animation-duration: 14s;
-  }
-  .waves > g > use:nth-child(4) {
-    animation-duration: 20s;
-  }
+}
+
+.waves > g > use:nth-child(1) {
+animation-duration: 8s;
+}
+.waves > g > use:nth-child(2) {
+animation-duration: 12s;
+}
+.waves > g > use:nth-child(3) {
+animation-duration: 14s;
+}
+.waves > g > use:nth-child(4) {
+animation-duration: 20s;
+}
 
 
 

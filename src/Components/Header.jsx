@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../Styles/Header.scss"
 import ScrollIntoView from 'react-scroll-into-view'
 import { ArrowRight2 } from './Icons'
 import { RxHamburgerMenu } from 'react-icons/rx'
+import { AiOutlineClose } from 'react-icons/ai'
 
 
 const Header = () => {
@@ -12,6 +13,8 @@ const Header = () => {
 
   //   document.querySelector(".maq-hol").appendChild(copy);
   // }, [])
+
+  const [showHam, setShowHam] = useState(false)
 
 
   const WavesSVG = () => (
@@ -57,8 +60,32 @@ const Header = () => {
               <button className='btn'>
                 Resume
             </button>
+            </ul>            
+            <RxHamburgerMenu size={30} className='hamburger' onClick={()=> setShowHam(true)}/>
+
+            <ul className={`menuu ${showHam ? 'zactive' : ''}`}>
+              <AiOutlineClose className={`closa`} size={30} onClick={()=> setShowHam(false)} />
+
+              <ScrollIntoView selector='.about' onClick={()=> setShowHam(false)} >
+                <li className='pulse'> <span>01.</span>About</li>                
+              </ScrollIntoView>
+
+              <ScrollIntoView selector='.works' onClick={()=> setShowHam(false)} >
+                <li className='pulse'> <span>02.</span>Experience</li>                
+              </ScrollIntoView>
+
+              <ScrollIntoView selector='.project__main' onClick={()=> setShowHam(false)} >
+                <li className='pulse'> <span>03.</span>Work</li>                
+              </ScrollIntoView>
+
+              <ScrollIntoView selector='.footer' onClick={()=> setShowHam(false)} >
+                <li className='pulse'> <span>04.</span>Contact</li>                
+              </ScrollIntoView>
+
+              <button className='btn'>
+                Resume
+              </button>
             </ul>
-            <RxHamburgerMenu size={30} className='hamburger' />
           </div>
         </div>
       </nav>
