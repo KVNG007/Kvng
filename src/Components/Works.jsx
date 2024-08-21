@@ -1,7 +1,7 @@
 import React , { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Lucid, Zuri, Distro, Provinci, Marlin } from "./Desc"
+import { Lucid, Zuri, Distro, Provinci, Feedxpay } from "./Desc"
 // import "swiper/swiper-bundle.min.css"
 import "../Styles/Works.scss"
 import "swiper"
@@ -24,12 +24,12 @@ const Works = () => {
 
             <div className="swiperr">
 
-            <li
-                  className={progress === 0 ? "active" : ""}
-                  onClick={() => setProgress(0)}
-                >
-                  Lucid Jungles
-                </li>
+              <li
+                className={progress === 0 ? "active" : ""}
+                onClick={() => setProgress(0)}
+              >
+                Feedxpay👑
+              </li>
               
               <ul>
                 
@@ -37,13 +37,13 @@ const Works = () => {
                   className={progress === 1 ? "active" : ""}
                   onClick={() => setProgress(1)}
                 >
-                  Work Distro
+                  Lucid Jungles
                 </li>
                 <li
                   className={progress === 2 ? "active" : ""}
                   onClick={() => setProgress(2)}
                 >
-                  Zuri Team
+                  Work Distro
                 </li>
                 <li
                   className={progress === 3 ? "active" : ""}
@@ -55,7 +55,7 @@ const Works = () => {
                   className={progress === 4 ? "active" : ""}
                   onClick={() => setProgress(4)}
                 >
-                  Marlin Club
+                  Zuri Team
                 </li>
               </ul>
             </div>
@@ -63,7 +63,7 @@ const Works = () => {
             <div className="worked__body">
               <div className="control">
                 <aside>
-                  <span style={{ top: `${progress * 60}px` }}></span>
+                  <span style={{ top: `${progress * 60}px`, backgroundColor: 'white'}}></span>
                 </aside>
 
                 <ul>
@@ -71,19 +71,19 @@ const Works = () => {
                     className={progress === 0 ? "active" : ""}
                     onClick={() => setProgress(0)}
                   >
-                    Lucid Jungles
+                    Feedxpay
                   </li>
                   <li
                     className={progress === 1 ? "active" : ""}
                     onClick={() => setProgress(1)}
                   >
-                    Work Distro
+                    Lucid Jungles
                   </li>
                   <li
                     className={progress === 2 ? "active" : ""}
                     onClick={() => setProgress(2)}
                   >
-                    Zuri Team
+                    Work Distro
                   </li>
                   <li
                     className={progress === 3 ? "active" : ""}
@@ -95,22 +95,22 @@ const Works = () => {
                     className={progress === 4 ? "active" : ""}
                     onClick={() => setProgress(4)}
                   >
-                    Marlin Club
+                    Zuri Teams
                   </li>
                 </ul>
               </div>
 
               <div className="outlet">
                 {progress === 0 ? (
-                  <Lucid />
+                  <Feedxpay />
                 ) : progress === 1 ? (
-                  <Distro />
+                  <Lucid />
                 ) : progress === 2 ? (
-                  <Zuri />
+                  <Distro />
                 ) : progress === 3 ? (
                   <Provinci />
                 ) : (
-                  <Marlin />
+                  <Zuri />
                 )}
               </div>
             </div>

@@ -1,9 +1,13 @@
 import { useState } from 'react';
+import { useRef } from 'react';
 import './App.scss';
 import './Styles/main.css'
 
 import Dropdown from "./Components/Dropdown"
 import Ham from "./Components/Ham"
+import Cursor from "./cursor/components/DotRing/DotRing"
+import { ChangeCursor2 } from './cursor/hooks/ChangeCursor'
+
 
 import Header from "./Components/Header" 
 import About from './Components/About';
@@ -19,17 +23,18 @@ function App() {
   const [show, setShow] = useState(false)
   const [showModal, setShowModal] = useState(false);
 
-
-
   const toggleShow = ()=> {
     setShow(!show)
   }
 
+  ChangeCursor2()
+
   return (
     <div className="App">
-      <div className={show ? "blurr blockk" : "blurr"} ></div>
-      <Dropdown show={show} setShow={setShow} />
-      <Ham toggle={show} toggleShow={toggleShow} onClick={()=>{toggleShow()}}/>
+
+      <Cursor />
+      {/* <Dropdown show={show} setShow={setShow} />
+      <Ham toggle={show} toggleShow={toggleShow} onClick={()=>{toggleShow()}}/> */}
       <Header />
       <About />
       <Works />

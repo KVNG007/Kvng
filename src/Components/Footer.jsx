@@ -17,7 +17,7 @@ const Footer = ({ setShowModal }) => {
                     <button onClick={()=> setShowModal(true)}> Contact Me</button>
                 </div>
 
-                <p className='credit'> Built by David Arifalo</p>
+                <p className='credit'> Built with ❤️ by David Arifalo</p>
             </div>
         </div>
 
@@ -28,11 +28,11 @@ const Footer = ({ setShowModal }) => {
                 <img src="./assets/github-svg1.svg" alt="git" />
             </a>
 
-            <a href='https://www.linkedin.com/in/david-arifalo-b5465a129/' target='_blank' className="sms_cont">
+            <a href='https://twitter.com/Kvng_Dheyvied' target='_blank' className="sms_cont">
                 <img src="./assets/twitter-svg4.svg" alt="twitter" />
             </a>
 
-            <a href='https://twitter.com/Kvng_Dheyvied' target='_blank' className="sms_cont">
+            <a href='https://www.linkedin.com/in/david-arifalo-b5465a129/' target='_blank' className="sms_cont">
                 <img src="./assets/linkedin-svg2.svg" alt="linkedIn" />
             </a>
         </div>

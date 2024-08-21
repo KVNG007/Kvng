@@ -86,7 +86,7 @@ const Modal = ({ showModal, setShowModal }) => {
   return (
     <div className="Modal" >
         <div className="Modal__cont" ref={modalRef}>
-            <div className="closer" onClick={()=> setShowModal(false)}>
+            <div className="closer link" onClick={()=> setShowModal(false)}>
               <span></span>
               <span></span>
             </div>
@@ -101,7 +101,7 @@ const Modal = ({ showModal, setShowModal }) => {
                 <input type="email"  name="email" value={formData.email} onChange={handleInput} />
 
                 <label htmlFor="message">Message</label>
-                <textarea type="text" placeholder="Message" name="message" value={formData.message} onChange={handleInput} />
+                <textarea className='no-scroll' type="text" placeholder="Message" name="message" value={formData.message} onChange={handleInput} />
 
                 <button>{sent ? "Sent" : "Submit"} </button>
             </form>
