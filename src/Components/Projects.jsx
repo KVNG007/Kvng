@@ -6,8 +6,10 @@ import { ArrowRight2 } from "./Icons"
 const Touch = () => {
 
 
+
+
   return (
-    <div className="project__main">
+    <div className="project__main" style={{ position: "relative" }}>
       <div className="container">
         <div className="project">
           <div className="project__heading">
@@ -16,13 +18,23 @@ const Touch = () => {
             </h1>
           </div>
 
-          <a href="https://lucidjungles.netlify.app/" target="_blank">
+          <a
+            href="https://lucidjungles.netlify.app/"
+            target="_blank"
+            style={{
+              position: "sticky",
+              height: "100dvh",
+              top: "0",
+              left: "0",
+              zIndex: "20",
+            }}
+          >
             <section>
               <div className="left">
                 <p>Featured Project</p>
                 <h2>LUCID JUNGLES</h2>
                 <div className="overflow">
-                  A gamified music palyer that lets you create all kinds of
+                  A gamified music player that lets you create all kinds of
                   immersive musical experiences, convert your songs into
                   customisable games, manage your digital identifier (Avatae),
                   merch, tours and events from the comfort of your home.
@@ -41,25 +53,41 @@ const Touch = () => {
                 </span>
               </div>
             </section>
+
+            <div className="title">
+              {" "}
+              <span></span> Lucid Jungles
+            </div>
           </a>
 
-          <a href="https://www.ipayseller.com/" target="_blank">
+          <a
+            href="https://synergy-xio.netlify.app"
+            target="_blank"
+            style={{
+              position: "sticky",
+              height: "100dvh",
+              top: "0",
+              left: "0",
+              zIndex: "22",
+            }}
+          >
             <aside>
               <div className="img__holder">
-                <img src="./assets/hobaa.png" alt="LUCID" />
+                <img src="./assets/synergy.png" alt="LUCID" />
                 <span href="https://thefutureisnowhomes.com" target="_blank">
                   Visit <ArrowRight2 />
                 </span>
               </div>
 
               <div className="left">
-                <p>Featured Project</p>
-                <h2>Hoba Herbal</h2>
+                <p>Solo Project</p>
+                <h2>Synergy</h2>
                 <div className="overflow">
-                  iPaySeller is the wealth creation and marketing platform for
-                  Hoba herbal products. Here, interested Affiliates can take
-                  advantage of our business empowerment program, giving them
-                  access to income and financial freedom.
+                  I designed a sleek, engaging landing page -Synergy.ai, that
+                  highlights the power of decentralized innovation. My design focuses on intuitive user experience and
+                  visual storytelling to captivate potential users and
+                  communicate the transformative potential of Synergy.ai's
+                  offerings.
                 </div>
 
                 <span>
@@ -67,9 +95,24 @@ const Touch = () => {
                 </span>
               </div>
             </aside>
+
+            <div className="title">
+              {" "}
+              <span></span> Synergy
+            </div>
           </a>
 
-          <a href="http://thefutureisnowhomes.com" target="_blank">
+          <a
+            href="https://future-homes.vercel.app/"
+            target="_blank"
+            style={{
+              position: "sticky",
+              height: "100dvh",
+              top: "0",
+              left: "0",
+              zIndex: "24",
+            }}
+          >
             <section>
               <div className="left">
                 <p>Featured Project</p>
@@ -94,11 +137,23 @@ const Touch = () => {
                 </span>
               </div>
             </section>
+
+            <div className="title">
+              {" "}
+              <span></span> Future is Now Homes
+            </div>
           </a>
 
           <a
             href="https://sensational-jelly-e7f0d4.netlify.app"
             target="_blank"
+            style={{
+              position: "sticky",
+              height: "100dvh",
+              top: "0",
+              left: "0",
+              zIndex: "26",
+            }}
           >
             <aside>
               <div className="img__holder">
@@ -123,6 +178,11 @@ const Touch = () => {
                 </span>
               </div>
             </aside>
+
+            <div className="title">
+              {" "}
+              <span></span> Near Website Clone
+            </div>
           </a>
 
           {/* <div className="others">

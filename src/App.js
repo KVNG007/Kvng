@@ -27,20 +27,28 @@ function App() {
     setShow(!show)
   }
 
-  ChangeCursor2()
+  ChangeCursor2();
+
+
 
   return (
-    <div className="App">
+    <div className="App" style={{display: 'flex', flexDirection: 'column'}}>
+      {/* <Dropdown show={show} setShow={setShow} /> */}
+      {/* <Ham toggle={show} toggleShow={toggleShow} onClick={()=>{toggleShow()}}/> */}
+
+
+
 
       <Cursor />
-      {/* <Dropdown show={show} setShow={setShow} />
-      <Ham toggle={show} toggleShow={toggleShow} onClick={()=>{toggleShow()}}/> */}
       <Header />
       <About />
       <Works />
       <Projects />
       <Footer setShowModal={setShowModal} />
+
       <Modal showModal={showModal} setShowModal={setShowModal}/>
+
+
 
     </div>
   );
